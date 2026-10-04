@@ -39,6 +39,8 @@ checkInForm.addEventListener("submit", function (event) {
   attendeeCount += 1;
   attendeeCountDisplay.textContent = attendeeCount;
   greeting.textContent = `Welcome, ${attendeeName}! You're checked in with ${teamName}.`;
+  greeting.classList.add("success-message");
+  greeting.style.display = "block";
 
   const progress = Math.min((attendeeCount / attendanceGoal) * 100, 100);
   progressBar.style.width = `${progress}%`;
